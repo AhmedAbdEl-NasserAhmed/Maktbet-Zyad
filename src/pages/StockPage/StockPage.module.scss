@@ -1,0 +1,27 @@
+@import "../../styles/Variables.scss";
+.page {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: 5rem;
+
+  &__content {
+    grid-column: 2 / -1;
+    padding: 3rem;
+  }
+
+  &__data-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    column-gap: 5rem;
+    margin-bottom: 5rem;
+  }
+  &__analysis-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    margin-bottom: 5rem;
+  }
+  &__analysis {
+    background-color: $color-white;
+  }
+}

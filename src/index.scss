@@ -1,0 +1,246 @@
+@import "./styles/Variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  font-family: $font-primary, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: $color-gray-light-3;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.table {
+  // margin: 5rem auto;
+  font-size: 1.5rem;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  &__actions {
+    width: 1px;
+    padding: 1rem !important;
+  }
+  caption {
+    text-align: right;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  td {
+    white-space: nowrap;
+    padding: 0.5rem;
+    border: 1px solid #d0d0d0;
+  }
+  thead {
+    height: 5rem;
+    background-color: #6e29db;
+  }
+  th {
+    white-space: nowrap;
+    color: $color-white;
+  }
+  tbody {
+    background-color: $color-white;
+    tr {
+      height: 5rem;
+      font-size: 1.7rem;
+    }
+    tr:nth-child(even) {
+      background-color: lighten($color-primary, 45);
+    }
+  }
+}
+
+.container {
+  max-width: 114rem;
+  margin: auto;
+  padding-inline: 1.5rem;
+}
+
+.grid-2x-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+}
+.grid-3fr-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 4rem;
+}
+
+.mt-xs {
+  margin-top: 1rem !important;
+}
+.mt-sm {
+  margin-top: 2rem !important;
+}
+.mt-md {
+  margin-top: 3rem !important;
+}
+.mt-lg {
+  margin-top: 4rem !important;
+}
+.mt-xg {
+  margin-top: 5rem !important;
+}
+.mb-xs {
+  margin-bottom: 1rem !important;
+}
+.mb-sm {
+  margin-bottom: 2rem !important;
+}
+.mb-md {
+  margin-bottom: 3rem !important;
+}
+.mb-lg {
+  margin-bottom: 4rem !important;
+}
+.mb-xg {
+  margin-bottom: 5rem !important;
+}
+.ml-xs {
+  margin-left: 1rem !important;
+}
+.ml-sm {
+  margin-left: 2rem !important;
+}
+.ml-md {
+  margin-left: 3rem !important;
+}
+.ml-lg {
+  margin-left: 4rem !important;
+}
+.ml-xg {
+  margin-left: 5rem !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.fix-icon {
+  transform: translateY(2px);
+}
+
+.table-responsive {
+  overflow-x: auto;
+  font-size: 1.3rem;
+}
+.responsive-y-table {
+  height: 27rem;
+  overflow-y: scroll;
+}
+
+.separator {
+  border: none;
+  border-bottom: 1px solid $color-gray-light-2;
+  margin: 3rem 0;
+  &--soft {
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $color-gray-dark-4;
+  font-family: $font-primary;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  border: none;
+  font-family: inherit;
+  color: $color-white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &--default {
+    border: 1px solid $color-gray-light;
+    border-radius: 0.4rem;
+    background-color: $color-white;
+    color: $color-gray-dark-4;
+    &:hover {
+      background-color: $color-gray-dark-4;
+      color: $color-white;
+    }
+  }
+  &--primary {
+    background-color: $color-blue-primary;
+  }
+  &--warning {
+    background: $color-warning;
+  }
+  &--danger {
+    background: $color-danger;
+  }
+  &--add {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+}
+
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-label {
+  font-size: 1.5rem;
+}
+
+.form-title {
+  font-size: 1.8rem;
+}
+
+.not-founded {
+  font-size: 2rem;
+  color: $color-gray-dark-3;
+  margin: 2rem 0;
+  text-align: center;
+  background: $color-white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.label {
+  color: $color-gray-dark;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+}
+.value {
+  color: $color-gray-dark-2;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}

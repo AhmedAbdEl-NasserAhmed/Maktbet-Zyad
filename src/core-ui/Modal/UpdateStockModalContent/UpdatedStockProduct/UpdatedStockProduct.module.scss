@@ -1,0 +1,39 @@
+@import "../../../../styles/Variables.scss";
+
+.add-bill-product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+  align-items: start;
+  &:nth-child(even) {
+    background: $color-gray-light-3;
+  }
+  &__info {
+    display: grid;
+    height: 100%;
+    grid-template-rows: min-content 1fr;
+    row-gap: 1.5rem;
+    &--product-name {
+      // width: 80%;
+    }
+    &--input {
+      display: block;
+      width: 80%;
+      padding: 1rem 0.5rem;
+      font-size: 2rem;
+    }
+    &--remove {
+      color: $color-danger;
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+  }
+  &--separator {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../../../styles/Variables.scss";
+
+.update-bill-product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+  align-items: start;
+  &:nth-child(even) {
+    background: $color-gray-light-3;
+  }
+  &__info {
+    display: grid;
+    height: 100%;
+    grid-template-rows: min-content 1fr;
+    row-gap: 1.5rem;
+    &--product-name {
+      width: 80%;
+    }
+    &--product-name &--static-value {
+      font-size: 1.3rem;
+      align-self: center;
+    }
+    &--plus-total {
+      color: $color-success;
+    }
+    &--minus-total {
+      color: $color-danger;
+    }
+    &--input {
+      display: block;
+      width: 50%;
+      padding: 1rem 0.5rem;
+    }
+    &--static-value {
+      align-self: end;
+    }
+    &--remove {
+      color: $color-danger;
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+  }
+  &--separator {
+    grid-column: 1 / -1;
+  }
+}

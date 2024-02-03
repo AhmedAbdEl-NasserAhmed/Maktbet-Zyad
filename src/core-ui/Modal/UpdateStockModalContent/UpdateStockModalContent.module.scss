@@ -1,0 +1,99 @@
+@import "../../../styles/Variables.scss";
+
+.add-bill-modal {
+  padding: 2rem;
+  font-size: 2rem;
+  position: relative;
+  height: 100%;
+
+  &__header {
+    position: relative;
+    &--date {
+      position: relative;
+    }
+  }
+
+  &__body {
+    position: relative;
+    &--title {
+      margin-bottom: 2rem;
+    }
+    &--products-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+    }
+    &--products-item {
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      &--label {
+        position: relative;
+      }
+      &--category {
+        position: relative;
+      }
+      &--count {
+        position: relative;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+  }
+  &__total {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    &--label {
+      position: relative;
+    }
+    &--value {
+      position: relative;
+    }
+  }
+}
+.add-bill-form {
+  &__products {
+    height: 28rem;
+    overflow-y: scroll;
+    background: $color-white;
+    padding: 0.5rem;
+  }
+  &__input {
+    display: block;
+    width: 25%;
+    margin: 0.5rem 0;
+    padding: 1rem 0.5rem;
+    &::-webkit-input-placeholder {
+      color: $color-gray-dark-2;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--ctas {
+      display: flex;
+      gap: 3rem;
+    }
+    &--info {
+      display: flex;
+      gap: 3rem;
+      &-item {
+        font-size: 1.5rem;
+      }
+      &-label {
+        color: $color-gray-dark;
+        margin-left: 1rem;
+      }
+      &-value {
+        color: $color-gray-dark-2;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

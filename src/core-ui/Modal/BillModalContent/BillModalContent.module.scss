@@ -1,0 +1,66 @@
+@import "../../../styles/Variables.scss";
+
+.bill-modal {
+  padding: 2rem;
+  font-size: 2rem;
+  position: relative;
+  height: 100%;
+
+  &__header {
+    position: relative;
+    &--date {
+      position: relative;
+    }
+  }
+
+  &__body {
+    position: relative;
+    &--title {
+      margin-bottom: 2rem;
+    }
+    &--type-normal .value {
+      color: $color-success !important;
+    }
+
+    &--type-returned .value {
+      color: $color-danger !important;
+    }
+    &--products-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+      // height: 27rem;
+      // overflow-y: scroll;
+    }
+    &--products-item {
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      &--label {
+        position: relative;
+      }
+      &--category {
+        position: relative;
+      }
+      &--count {
+        position: relative;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+  }
+  &__total {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    &--label {
+      position: relative;
+    }
+    &--value {
+      position: relative;
+    }
+  }
+}

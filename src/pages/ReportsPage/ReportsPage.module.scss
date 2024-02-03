@@ -1,0 +1,25 @@
+@import "../../styles/Variables.scss";
+
+.report {
+  padding: 1rem;
+  &__header--wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2rem;
+    font-weight: bold;
+    @media print {
+      display: none;
+    }
+    a {
+      color: $color-gray-dark-3;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}

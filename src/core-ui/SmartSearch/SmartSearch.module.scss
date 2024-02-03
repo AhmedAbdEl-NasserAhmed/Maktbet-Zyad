@@ -1,0 +1,61 @@
+@import "../../styles/Variables.scss";
+
+.smart-search {
+  width: 100%;
+  background-color: $color-gray-light-3;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  position: relative;
+
+  &__input {
+    padding: 1rem 0.5rem;
+    width: 100%;
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    &::-webkit-input-placeholder {
+      color: $color-gray-dark-2;
+    }
+    &:focus {
+      outline: 1px solid $color-gray-light-3;
+    }
+  }
+  &__result {
+    min-height: 3rem;
+    max-height: 15rem;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: $color-gray-light-3;
+    position: absolute;
+    padding: 0.3rem;
+    left: 0;
+    animation: slideDown 0.5s ease forwards;
+    z-index: 9;
+    &-item {
+      background-color: $color-white;
+      font-size: 1.7rem;
+      padding: 0.5rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      &:nth-child(even) {
+        background-color: $color-gray-light-4;
+      }
+      &:nth-child(even):hover {
+        background-color: darken($color-white, 1);
+      }
+      &:nth-child(odd):hover {
+        background-color: darken($color-gray-light-4, 1);
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    min-height: 0;
+    max-height: 0;
+  }
+  100% {
+    min-height: 3rem;
+    max-height: 15rem;
+  }
+}

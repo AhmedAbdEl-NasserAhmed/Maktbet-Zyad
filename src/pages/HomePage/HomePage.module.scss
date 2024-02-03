@@ -1,0 +1,28 @@
+@import "../../styles/Variables.scss";
+
+.home-page {
+  &__content {
+    padding: 3rem;
+  }
+  &__intro {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__full-date {
+    font-size: 4rem;
+  }
+  &__income {
+    padding: 1rem;
+    // width: 15rem;
+    text-align: center;
+    color: $color-white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    border-radius: 2rem;
+    align-self: start;
+    flex-direction: column;
+  }
+}

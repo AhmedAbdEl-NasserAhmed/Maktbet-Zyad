@@ -1,0 +1,72 @@
+@import "../../styles/Variables.scss";
+
+.snackbar {
+  width: 20vw;
+  height: 6rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: $color-white;
+  animation: snackbarMove 5s ease forwards;
+  gap: 2rem;
+  z-index: $zIndex-5;
+  &--success {
+    background-color: $color-success-dark;
+  }
+  &--error {
+    background-color: $color-danger-dark;
+  }
+  &--warning {
+    background-color: lighten($color-warning-dark, 45%);
+  }
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    &--success {
+      background-color: darken($color-success-dark, 10%);
+    }
+    &--error {
+      background-color: darken($color-danger-dark, 10%);
+    }
+    &--warning {
+      background-color: lighten($color-warning-dark, 15%);
+    }
+  }
+  &__message {
+    font-weight: bold;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes snackbarMove {
+  0% {
+    transform: translateY(-50rem);
+    opacity: 0;
+  }
+  5% {
+    transform: translateY(12%);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50rem);
+    opacity: 0;
+  }
+}

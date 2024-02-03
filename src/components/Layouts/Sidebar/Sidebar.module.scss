@@ -1,0 +1,48 @@
+@import "../../../styles/Variables.scss";
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  background: linear-gradient(to bottom, $color-primary, $color-primary-dark);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+
+  &__header {
+    background-color: $color-primary-dark;
+    color: $color-white;
+    padding: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    font-size: 1.7rem;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: min-content 50%;
+    justify-content: center;
+    padding-block: 0.5rem;
+    transition: all 0.2s ease;
+    color: $color-white;
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+  &__link {
+    &--maktaba {
+      color: $color-secondary-light;
+    }
+    &--active {
+      background-color: $color-primary-dark;
+    }
+  }
+}

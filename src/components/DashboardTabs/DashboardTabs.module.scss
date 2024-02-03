@@ -1,0 +1,49 @@
+@import "../../styles/Variables.scss";
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  font-size: 2rem;
+  position: relative;
+  &__item {
+    color: $color-gray-dark-4;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &--active {
+      font-weight: 700;
+      color: $color-gray-dark-2;
+    }
+    span:first-of-type {
+      display: inline-block;
+    }
+    &--count {
+      background: $color-tertiary;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      margin-right: 0.7rem;
+      color: $color-gray-dark-2;
+      transform: translateY(2px);
+    }
+  }
+  &__tracer {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    // right: 0;
+    left: 0;
+    height: 0.4rem;
+    background: $color-primary;
+    transition: all 0.5s ease;
+  }
+
+  &__item:hover ~ &__tracer {
+    transform: scaleX(1.2);
+  }
+}
